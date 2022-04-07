@@ -1,3 +1,9 @@
+## Websites
+[Lab Report 1](lab-report-1-week-2.html) 
+
+[Lab Report 1](https://lilianjma.github.io/lab-report-1-week-2.html)
+
+
 *Italic*
 
 **Bold**
