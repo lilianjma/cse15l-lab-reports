@@ -2,6 +2,7 @@
 
 ## Command 1:$ls
 
+Typing in $ls 
 
 <img width="682" alt="Screen Shot 2022-04-07 at 3 41 46 PM" src="https://user-images.githubusercontent.com/31358827/162331435-90a9ed20-bd28-4f02-b16c-5407fec55488.png">
 
