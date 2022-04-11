@@ -25,3 +25,21 @@ Typing in `$cd ` and then the name of a directory will move you to that director
 Typing in `$cd ..` move you from your current directory into its parent directory. As seen below, I was in the "UCSD" directory and then after using the command I moved into its parent directory which also happened to be the root directory.
 
 <img width="682" alt="Screen Shot 2022-04-07 at 3 42 38 PM" src="https://user-images.githubusercontent.com/31358827/162331478-66b27e0c-ce07-4f59-a840-ee33e3d32f24.png">
+
+## Command 5: $pwd
+
+`$pwd` is another way to see which directory you are in aka it shows the file path to the directory that you are in.
+
+<img width="682" alt="Screen Shot 2022-04-10 at 6 47 09 PM" src="https://user-images.githubusercontent.com/31358827/162651638-17be788f-c8d4-43d7-a8c7-dfdc3688e212.png">
+
+
+
+## Command 4: $clear
+
+If you want to clear the screen of your terminal, use `$clear`. It will not delete your past commands so you can still use the up and down arrow keys to access your past commands.
+
+Before pressing enter:
+<img width="682" alt="Screen Shot 2022-04-10 at 6 47 39 PM" src="https://user-images.githubusercontent.com/31358827/162651672-1aabc8f2-9ddf-4230-ac4a-a6f70a5a4212.png">
+
+After pressing enter:
+<img width="682" alt="Screen Shot 2022-04-10 at 6 48 12 PM" src="https://user-images.githubusercontent.com/31358827/162651713-1dbea16a-be32-4dab-a739-15f5370936f3.png">
