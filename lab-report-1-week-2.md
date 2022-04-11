@@ -39,7 +39,9 @@ Typing in `$cd ..` move you from your current directory into its parent director
 If you want to clear the screen of your terminal, use `$clear`. It will not delete your past commands so you can still use the up and down arrow keys to access your past commands.
 
 Before pressing enter:
+
 <img width="682" alt="Screen Shot 2022-04-10 at 6 47 39 PM" src="https://user-images.githubusercontent.com/31358827/162651672-1aabc8f2-9ddf-4230-ac4a-a6f70a5a4212.png">
 
 After pressing enter:
+
 <img width="682" alt="Screen Shot 2022-04-10 at 6 48 12 PM" src="https://user-images.githubusercontent.com/31358827/162651713-1dbea16a-be32-4dab-a739-15f5370936f3.png">
