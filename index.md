@@ -1,7 +1,9 @@
 ## Websites
-[Lab Report 1](lab-report-1-week-2.html) 
+[Lab Report 1 HTML](lab-report-1-week-2.html) 
 
-[Lab Report 1](https://lilianjma.github.io/lab-report-1-week-2.html)
+[Lab Report 1 .md](https://lilianjma.github.io/lab-report-1-week-2.md)
+
+[Second File HTML](https://lilianjma.github.io/cse15l-lab-reports/helo.html)
 
 
 *Italic*
