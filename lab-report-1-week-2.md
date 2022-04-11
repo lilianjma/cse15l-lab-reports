@@ -1,4 +1,6 @@
-## 
+# Important Terminal Commands
+
+###Command 1:$ls
 <img width="682" alt="Screen Shot 2022-04-07 at 3 41 46 PM" src="https://user-images.githubusercontent.com/31358827/162331435-90a9ed20-bd28-4f02-b16c-5407fec55488.png">
 
 <img width="682" alt="Screen Shot 2022-04-07 at 3 42 01 PM" src="https://user-images.githubusercontent.com/31358827/162331456-d74ccca8-4b47-4008-a0e8-a1bb3a3db14c.png">
