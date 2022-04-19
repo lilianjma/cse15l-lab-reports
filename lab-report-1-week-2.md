@@ -86,3 +86,9 @@ Then log out of your remote server and use the following command: `scp /Users/<y
 It will look something like this and now you will be able to save time:
 
 <img width="937" alt="Screen Shot 2022-04-18 at 6 04 16 PM" src="https://user-images.githubusercontent.com/31358827/163899917-d8e0aec2-3a22-4bff-bc41-2e53c9afd366.png">
+
+# Optimizing Remote Running
+
+In the screenshot directly above, you can see that I used the command `ssh cs15lsp22asc@ieng6.ucsd.edu "ls"` to log into the remote server then get a list of the files all in one command. Below that command you can see I use semicolons to separate different commands so I can run them all at once. An example of optimizing remote running is by combining these two ideas and here you can see I connect to the remote server then I copy a WhereAmI.java into a new file called OtherMain.java and then I compile and run OtherMain.java and I use ls to list all of the files: 
+
+<img width="916" alt="Screen Shot 2022-04-18 at 6 11 02 PM" src="https://user-images.githubusercontent.com/31358827/163900467-421ed156-415e-4652-9673-c2b5670a70df.png">
