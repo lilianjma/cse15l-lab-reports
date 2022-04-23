@@ -1,11 +1,12 @@
-## Websites
-[Lab Report 1 HTML](lab-report-1-week-2.html) 
-
+## Lab Reports .md files 
 [Lab Report 1 .md](https://lilianjma.github.io/lab-report-1-week-2.md)
+[Lab Report 2 .md](https://github.com/lilianjma/cse15l-lab-reports/blob/main/lab-report-2-week-4.md)
 
-[Second File HTML](https://lilianjma.github.io/cse15l-lab-reports/helo.html)
+## Lab Reports .html files
+[Lab Report 1 HTML](lab-report-1-week-2.html)
+[Lab Report 2 HTML](lab-report-2-week-4.html)
 
-
+## Testing Formatting
 *Italic*
 
 **Bold**
