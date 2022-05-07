@@ -44,10 +44,13 @@ Github while logged into your ieng6 account.
 
 ## Copy whole directories with scp -r
 1. Show copying your whole markdown-parse directory to your ieng6 account.  
-scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parse
+scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser
+<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 02 PM" src="https://user-images.githubusercontent.com/31358827/167271281-4b6f9dfa-b184-41b2-a562-eafa42ce015c.png">  
 
 2. Show logging into your ieng6 account after doing this and compiling
 and running the tests for your repository.  
+<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 49 PM" src="https://user-images.githubusercontent.com/31358827/167271307-aa9c1d27-1bff-42b9-9444-5c86bfa4dd58.png">
 
 3.  Show (like in the last step ofthe firstlab) combining scp, ;, and
 ssh to copy the whole directory and run the tests in one line.  
+<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 49 PM" src="https://user-images.githubusercontent.com/31358827/167271307-aa9c1d27-1bff-42b9-9444-5c86bfa4dd58.png">
