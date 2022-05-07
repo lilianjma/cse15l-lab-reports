@@ -21,7 +21,9 @@ account (but not its contents) as a screenshot.
 Github while logged into your ieng6 account.  
 
 4. Show a link for the resulting commit.  
+<img width="1067" alt="Screen Shot 2022-05-06 at 11 58 53 PM" src="https://user-images.githubusercontent.com/31358827/167242829-37b2c7f2-fbfc-4fcc-bba1-a109cf1ce75e.png">
 
+<img width="1067" alt="Screen Shot 2022-05-06 at 11 59 03 PM" src="https://user-images.githubusercontent.com/31358827/167242839-b546e23b-f98e-49c2-86f2-e4e0ab06e092.png">
 
 
 ## Copy whole directories with scp -r
