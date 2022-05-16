@@ -21,6 +21,7 @@ User cs15lsp22zzz (use your username)``
 HostName ieng6.ucsd.edu
 User cs15lsp22zzz (use your username)
 IdentityFile ~/.ssh/id_rsa``
+5. Then you should be able to use ieng6 in place of your account name.
 
 
 
