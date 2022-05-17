@@ -1,4 +1,6 @@
 # Streamline ssh Configuration  
+*Description: This allows you to create a shortcut for your username instead of having to write out the entire .ucsd.edu account name.*  
+
 1. Show your .ssh/config file, and how you edited it (with VScode, another program, etc)  
 <img width="752" alt="Screen Shot 2022-05-05 at 9 35 03 PM" src="https://user-images.githubusercontent.com/31358827/167067700-456b06de-054d-4553-b646-3e9b67abb1c7.png">
 
@@ -7,8 +9,6 @@
 
 3. Show an scp command copying a file to your account using just the alias you chose.  
 <img width="689" alt="Screen Shot 2022-05-06 at 8 04 04 PM" src="https://user-images.githubusercontent.com/31358827/167235550-b8dcfde3-10cd-4024-a4ea-9125ee4e72e8.png">  
-
-*Description: This allows you to create a shortcut for your username instead of having to write out the entire .ucsd.edu account name.*
 
 
 
@@ -41,7 +41,9 @@ Github while logged into your ieng6 account.
 <img width="1067" alt="Screen Shot 2022-05-06 at 11 59 03 PM" src="https://user-images.githubusercontent.com/31358827/167242839-b546e23b-f98e-49c2-86f2-e4e0ab06e092.png">  
 
 
-# Copy whole directories with scp -r    
+# Copy whole directories with scp -r  
+*Description: Now you will be able to copy whole directories instead of just individual files*  
+
 1. Show copying your whole markdown-parse directory to your ieng6 account.  
 scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser  
 <img width="682" alt="Screen Shot 2022-05-16 at 2 43 18 PM" src="https://user-images.githubusercontent.com/31358827/168687415-fe700e90-d647-44f1-9ecb-78efa6406ccf.png">
@@ -49,7 +51,9 @@ scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser
 
 2. Show logging into your ieng6 account after doing this and compiling
 and running the tests for your repository.  
-<img width="885" alt="Screen Shot 2022-05-16 at 7 15 46 PM" src="https://user-images.githubusercontent.com/31358827/168714682-e83dfe23-6524-48c7-aea4-d73bf9c379f2.png">
+Running using my make file:  
+<img width="885" alt="Screen Shot 2022-05-16 at 7 15 46 PM" src="https://user-images.githubusercontent.com/31358827/168714682-e83dfe23-6524-48c7-aea4-d73bf9c379f2.png">  
+Running using normal commands:  
 <img width="766" alt="Screen Shot 2022-05-16 at 6 01 05 PM" src="https://user-images.githubusercontent.com/31358827/168706339-0567a152-ced1-4f3e-bd47-fe2978786a78.png">  
 
 3.  Show (like in the last step of the first lab) combining scp, ;, and
@@ -61,12 +65,15 @@ ssh to copy the whole directory and run the tests in one line.
 ### Steps for this section 
 1. To use `scp` to copy this directory to the remote server, `cd` into the repository that you want to copy and then use this command (this will also give a name of the directory we want it to copy into on the remote server):  
 `$ scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse`  
-I called my repository something different to match the repository that I copied.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(I called my repository something different to match the repository that I copied.)  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What each command means:  
 * The `-r` option tells scp to work recursively.
 * The `.` is the source, and is the current directory. 
 * The `~/markdown-parse` tells scp to create the markdown-parse directory on the remote server (if it doesn’t exist), and then copy the contents of this directory recursively there. If we do this, then we can log into the server with ssh and see all of our files there in a directory called markdown-parse using `scp -r . ieng6:markdown-parse`
 
-*Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll run into. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`. It will copy only the .java and .md and the lib files :)*  
+*Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll run into. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`. It will copy only the .java and .md and the lib files/folder*  
 
 2. Then log into your remote using `scp` and `cd` into the copied repository. Compile and run your tests using `make test` if you created a Make file or `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`  
 
@@ -76,7 +83,4 @@ I called my repository something different to match the repository that I copied
 
 If you get an error that looks like this: <img width="452" alt="Screen Shot 2022-05-16 at 7 44 32 PM" src="https://user-images.githubusercontent.com/31358827/168717667-1416a254-654c-4067-ab66-7f9638c686c9.png">
 then use this command:  
-`scp -r *.java *.md *.jar lib/ cs15lsp22asc@ieng6.ucsd.edu:good-markdown-parser; ssh ieng6 "cd good-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
-
-
-*Description: Now you will be able to copy whole directories instead of just individual files*
+`scp -r *.java *.md *.jar lib/ cs15lsp22asc@ieng6.ucsd.edu:good-markdown-parser; ssh ieng6 "cd good-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`  
