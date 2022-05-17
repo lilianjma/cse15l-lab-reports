@@ -51,20 +51,34 @@ scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser
 
 2. Show logging into your ieng6 account after doing this and compiling
 and running the tests for your repository.  
-<img width="655" alt="Screen Shot 2022-05-16 at 6 03 55 PM" src="https://user-images.githubusercontent.com/31358827/168706408-0fb04f58-7b86-4fa7-b133-fba9ceaefbad.png">
-
+<img width="885" alt="Screen Shot 2022-05-16 at 7 15 46 PM" src="https://user-images.githubusercontent.com/31358827/168714682-e83dfe23-6524-48c7-aea4-d73bf9c379f2.png">
+<img width="766" alt="Screen Shot 2022-05-16 at 6 01 05 PM" src="https://user-images.githubusercontent.com/31358827/168706339-0567a152-ced1-4f3e-bd47-fe2978786a78.png">  
 
 3.  Show (like in the last step of the first lab) combining scp, ;, and
 ssh to copy the whole directory and run the tests in one line.  
-<img width="766" alt="Screen Shot 2022-05-16 at 6 01 05 PM" src="https://user-images.githubusercontent.com/31358827/168706339-0567a152-ced1-4f3e-bd47-fe2978786a78.png">
+<img width="738" alt="Screen Shot 2022-05-16 at 7 29 29 PM" src="https://user-images.githubusercontent.com/31358827/168716135-1ab83834-7d35-4bee-b745-e52782ba5bf2.png">
+
 
 
 ### Steps for this section 
-1. Use `scp` to copy this directory to the remote server. 
-2. We also have to give a name of the directory we want it to copy into on the remote server:
-`$ scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse`
-3. The-r option tells scp to work recursively. The. is the source, and is the current directory. The~/markdown-parse tells scp to create the markdown-parse directory on the remote server (if it doesn’t exist), and then copy the contents of this directory recursively there.
-If we do this, then we can log into the server withssh and see all of our files there in a
-directory calledmarkdown-parse using `scp -r . ieng6:markdown-parse`
-4. Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll runinto. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`  
-*Description: doing this will allow you to copy whole directories instead of just individual files*
+1. To use `scp` to copy this directory to the remote server, `cd` into the repository that you want to copy and then use this command (this will also give a name of the directory we want it to copy into on the remote server):  
+`$ scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse`  
+I called my repository something different to match the repository that I copied.  
+* The `-r` option tells scp to work recursively.
+* The `.` is the source, and is the current directory. 
+* The `~/markdown-parse` tells scp to create the markdown-parse directory on the remote server (if it doesn’t exist), and then copy the contents of this directory recursively there. If we do this, then we can log into the server with ssh and see all of our files there in a directory called markdown-parse using `scp -r . ieng6:markdown-parse`
+
+*Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll run into. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`. It will copy only the .java and .md and the lib files :)*  
+
+2. Then log into your remote using `scp` and `cd` into the copied repository. Compile and run your tests using `make test` if you created a Make file or `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`  
+
+
+3. `exit` back to your local desktop. To copy the repo and run all the tests all in one line, use this command:  
+`scp -r *.java *.md *.jar lib/ cs15lsp22asc@ieng6.ucsd.edu:good-markdown-parser; ssh ieng6 "cd good-markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
+
+If you get an error that looks like this: <img width="452" alt="Screen Shot 2022-05-16 at 7 44 32 PM" src="https://user-images.githubusercontent.com/31358827/168717667-1416a254-654c-4067-ab66-7f9638c686c9.png">
+then use this command:  
+`scp -r *.java *.md *.jar lib/ cs15lsp22asc@ieng6.ucsd.edu:good-markdown-parser; ssh ieng6 "cd good-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
+
+
+*Description: now you will be able to copy whole directories instead of just individual files*
