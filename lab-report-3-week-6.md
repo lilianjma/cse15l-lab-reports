@@ -9,7 +9,7 @@
 <img width="689" alt="Screen Shot 2022-05-06 at 8 04 04 PM" src="https://user-images.githubusercontent.com/31358827/167235550-b8dcfde3-10cd-4024-a4ea-9125ee4e72e8.png">
 
 
-### Description  
+### Description
 This allows you to create a shortcut for your username instead of having to write out the entire .ucsd.edu account name.
 
 
@@ -81,4 +81,5 @@ then use this command:
 `scp -r *.java *.md *.jar lib/ cs15lsp22asc@ieng6.ucsd.edu:good-markdown-parser; ssh ieng6 "cd good-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
 
 
-*Description: now you will be able to copy whole directories instead of just individual files*
+### Description
+Now you will be able to copy whole directories instead of just individual files
