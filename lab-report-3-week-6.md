@@ -9,19 +9,8 @@
 <img width="689" alt="Screen Shot 2022-05-06 at 8 04 04 PM" src="https://user-images.githubusercontent.com/31358827/167235550-b8dcfde3-10cd-4024-a4ea-9125ee4e72e8.png">
 
 
-### Steps for this section  
-1. Open or create ~/.ssh/config on your computer
-2. Add these lines: 
-``Host ieng6
-HostName ieng6.ucsd.edu
-User cs15lsp22zzz (use your username)``
-3. And then try this command: `ssh ieng6`
-4. If things are set up correctly, this should use the key and log you in with the username you specified using your public key. If this doesn’t work, you can try adding a line to explicitly refer to yourid_rsa file:
-``Host ieng6
-HostName ieng6.ucsd.edu
-User cs15lsp22zzz (use your username)
-IdentityFile ~/.ssh/id_rsa``
-5. Then you should be able to use ieng6 in place of your account name.
+### Description  
+This allows you to create a shortcut for your username instead of having to write out the entire .ucsd.edu account name.
 
 
 
@@ -51,32 +40,31 @@ Github while logged into your ieng6 account.
 6. Commit the change by using `git commit -m "some message here"`
 7. Push the commit by using `git push origin main` and you're done.
 
-<img width="1067" alt="Screen Shot 2022-05-06 at 11 59 03 PM" src="https://user-images.githubusercontent.com/31358827/167242839-b546e23b-f98e-49c2-86f2-e4e0ab06e092.png">
+<img width="1067" alt="Screen Shot 2022-05-06 at 11 59 03 PM" src="https://user-images.githubusercontent.com/31358827/167242839-b546e23b-f98e-49c2-86f2-e4e0ab06e092.png">  
 
 
-
-
-
-# Copy whole directories with scp -r
+# Copy whole directories with scp -r    
 1. Show copying your whole markdown-parse directory to your ieng6 account.  
-scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser
-<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 02 PM" src="https://user-images.githubusercontent.com/31358827/167271281-4b6f9dfa-b184-41b2-a562-eafa42ce015c.png">  
+scp -r *.java *.md lib/cs15lsp22asc@ieng6.ucsd.edu:markdown-parser  
+<img width="682" alt="Screen Shot 2022-05-16 at 2 43 18 PM" src="https://user-images.githubusercontent.com/31358827/168687415-fe700e90-d647-44f1-9ecb-78efa6406ccf.png">
+
 
 2. Show logging into your ieng6 account after doing this and compiling
 and running the tests for your repository.  
-<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 49 PM" src="https://user-images.githubusercontent.com/31358827/167271307-aa9c1d27-1bff-42b9-9444-5c86bfa4dd58.png">
+<img width="655" alt="Screen Shot 2022-05-16 at 6 03 55 PM" src="https://user-images.githubusercontent.com/31358827/168706408-0fb04f58-7b86-4fa7-b133-fba9ceaefbad.png">
 
-3.  Show (like in the last step ofthe firstlab) combining scp, ;, and
+
+3.  Show (like in the last step of the first lab) combining scp, ;, and
 ssh to copy the whole directory and run the tests in one line.  
-<img width="1088" alt="Screen Shot 2022-05-07 at 1 50 49 PM" src="https://user-images.githubusercontent.com/31358827/167271307-aa9c1d27-1bff-42b9-9444-5c86bfa4dd58.png">  
-*Note: I scp two different MarkdownParsers, the one that I copy in the screenshots had an unresolved infinite loop, that is why it prints "This method ran" like a bajillion times, so I could not scroll up to find the actual command that I used, that is why I used a different MarkdownParser directory that I had coppied before to run the command.*
+<img width="766" alt="Screen Shot 2022-05-16 at 6 01 05 PM" src="https://user-images.githubusercontent.com/31358827/168706339-0567a152-ced1-4f3e-bd47-fe2978786a78.png">
 
 
 ### Steps for this section 
-1. Usescp to copy this directory to the remote server. 
+1. Use `scp` to copy this directory to the remote server. 
 2. We also have to give a name of the directory we want it to copy into on the remote server:
 `$ scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse`
-3. The-r option tellsscp to work recursively. The. is thesource, and is the currentdirectory. The~/markdown-parse tells scp to create the markdown-parse directory on the remote server (if it doesn’t exist), and then copy the contents of this directory recursively there.
+3. The-r option tells scp to work recursively. The. is the source, and is the current directory. The~/markdown-parse tells scp to create the markdown-parse directory on the remote server (if it doesn’t exist), and then copy the contents of this directory recursively there.
 If we do this, then we can log into the server withssh and see all of our files there in a
 directory calledmarkdown-parse using `scp -r . ieng6:markdown-parse`
-4. Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll runinto. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`
+4. Note that when we do this it copies not just the files we see with ls, but all of the files in .git as well. This is fine for most uses you’ll runinto. However, you can have more control over what gets copied. Try this command: `scp -r *.java *.md lib/cs15lsp22@ieng6.ucsd.edu:markdown-parse`  
+*Description: doing this will allow you to copy whole directories instead of just individual files*
