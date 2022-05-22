@@ -1,10 +1,12 @@
 ## Our MarkdownParser
+*[link to our MarkdownParser](https://github.com/lilianjma/good-markdown-parser)*
 <img width="880" alt="Screen Shot 2022-05-19 at 3 12 50 PM" src="https://user-images.githubusercontent.com/31358827/169413103-fba608cb-4161-40ba-aa86-3a3617d446d4.png">
 * Didn't pass snippet 1
 * Didn't pass snippet 2
 * Passed snippet 3
 
 ## Reviewed MarkdownParser
+*[link to reviewed MarkdownParser](https://github.com/lilianjma/reviewed-markdown-parser)*
 <img width="744" alt="Screen Shot 2022-05-19 at 3 13 20 PM" src="https://user-images.githubusercontent.com/31358827/169413166-400166ae-ae78-47e4-9bee-e43fe3658ceb.png">
 * Didn't pass snippet 1
 * Didn't pass snippet 2
