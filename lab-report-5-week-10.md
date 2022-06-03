@@ -1,6 +1,3 @@
-Different Test Files  
-
-
 ### How you found the tests with different results?  
 I searched through using vim diff.  
 
