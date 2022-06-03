@@ -1,7 +1,6 @@
 ### How you found the tests with different results?  
 I searched through using vim diff.  
 
-*Provide a link to the test-file with different-results*
 # TEST FILE 495
 [link to file](https://github.com/nidhidhamnani/markdown-parser/blob/main/test-files/495.md)  
 
